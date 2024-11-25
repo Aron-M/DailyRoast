@@ -146,6 +146,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 30px;
+    margin-bottom: 30px;
     width: auto !important;
 }
 
