@@ -51,13 +51,43 @@
                     <div class="image-gallery container mb-5">
                         <div class="row justify-content-center">
                             <div class="col-12">
-                                <div class="gallery-wrapper">
-                                    <img src="images/img1.jpg" alt="Coffee Service" class="gallery-image fade-in">
-                                    <img src="images/img2.jpg" alt="Coffee Service" class="gallery-image fade-in">
-                                    <img src="images/img3.jpg" alt="Coffee Service" class="gallery-image fade-in">  
-                                    <img src="images/img4.jpg" alt="Coffee Service" class="gallery-image fade-in">
-                                    <img src="images/img5.jpg" alt="Coffee Service" class="gallery-image fade-in">
-                                    <img src="images/img6.jpg" alt="Coffee Service" class="gallery-image fade-in">
+                                <!-- Bootstrap Carousel -->
+                                <div id="imageCarousel" class="carousel slide" data-bs-ride="false">
+                                    <div class="carousel-inner">
+                                        <!-- First group of 3 images -->
+                                        <div class="carousel-item active">
+                                            <div class="d-flex justify-content-center gap-3">
+                                                <img src="images/img1.jpg" alt="Coffee Service"
+                                                    class="gallery-image fade-in">
+                                                <img src="images/img2.jpg" alt="Coffee Service"
+                                                    class="gallery-image fade-in">
+                                                <img src="images/img3.jpg" alt="Coffee Service"
+                                                    class="gallery-image fade-in">
+                                            </div>
+                                        </div>
+                                        <!-- Second group of 3 images -->
+                                        <div class="carousel-item">
+                                            <div class="d-flex justify-content-center gap-3">
+                                                <img src="images/img4.jpg" alt="Coffee Service"
+                                                    class="gallery-image fade-in">
+                                                <img src="images/img5.jpg" alt="Coffee Service"
+                                                    class="gallery-image fade-in">
+                                                <img src="images/img6.jpg" alt="Coffee Service"
+                                                    class="gallery-image fade-in">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Carousel Controls -->
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel"
+                                        data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +110,8 @@
                 <div class="col-lg-8">
                     <h2 class="display-5 mb-4">Crafting Good Times, One Cup at a Time</h2>
                     <p class="lead">DailyRoast brings the coffee shop experience to your venue. Our expert baristas and
-                        state-of-the-art mobile equipment ensure your guests enjoy the perfect cup, paired with delicious canapé's every time.</p>
+                        state-of-the-art mobile equipment ensure your guests enjoy the perfect cup, paired with
+                        delicious canapé's every time.</p>
                 </div>
             </div>
         </div>
@@ -119,14 +150,16 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Pre-Order Section -->
     <section class="pre-order-section py-5 bg-light">
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-8">
                     <h2 class="display-5 mb-4">Pre-Orders & Deliveries</h2>
-                    <p class="lead mb-4">Elevate your event with our gourmet canapés and appetizers, freshly prepared and delivered to your door. Perfect for corporate meetings, private gatherings, or any special occasion.</p>
+                    <p class="lead mb-4">Elevate your event with our gourmet canapés and appetizers, freshly prepared
+                        and delivered to your door. Perfect for corporate meetings, private gatherings, or any special
+                        occasion.</p>
                     <button class="btn btn-primary btn-lg cta-button">Create Order</button>
                 </div>
             </div>

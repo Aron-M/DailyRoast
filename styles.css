@@ -150,27 +150,64 @@ body {
     width: auto !important;
 }
 
-.gallery-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: nowrap;
-    padding: 20px 0;
-    opacity: 0; /* Start hidden */
-    animation: fadeInGallery 1s forwards;
-    animation-delay: 3.2s; /* Start after typing animation + punctuation (2.2s + 1s) */
-}
-
 .gallery-image {
-    width: 200px;  /* Adjust this value as needed */
+    width: 120px;
+    height: 80px;
     object-fit: cover;
-    border-radius: 12px; /* Rounded corners */
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    opacity: 0;
+    animation: fadeInGallery 1s forwards;
+    animation-delay: 3.2s;
 }
 
-.gallery-image:hover {
-    transform: translateY(-5px);
+/* Custom carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto;
+    padding: 0 15px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+/* Hide controls on larger screens */
+@media (min-width: 769px) {
+    #imageCarousel .carousel-control-prev,
+    #imageCarousel .carousel-control-next {
+        display: none;
+    }
+}
+
+/* Responsive image sizes */
+@media (max-width: 768px) {
+    .gallery-image {
+        width: 100px;
+        height: 67px;
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-image {
+        width: 90px;
+        height: 60px;
+    }
+}
+
+/* Keep your existing fadeInGallery animation */
+@keyframes fadeInGallery {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Fade in animation */
