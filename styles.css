@@ -146,68 +146,30 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 30px;
-    margin-bottom: 30px;
     width: auto !important;
 }
 
-.gallery-image {
-    width: 120px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    opacity: 0;
+.gallery-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    padding: 20px 0;
+    opacity: 0; /* Start hidden */
     animation: fadeInGallery 1s forwards;
-    animation-delay: 3.2s;
+    animation-delay: 3.2s; /* Start after typing animation + punctuation (2.2s + 1s) */
 }
 
-/* Custom carousel controls */
-.carousel-control-prev,
-.carousel-control-next {
-    width: auto;
-    padding: 0 15px;
+.gallery-image {
+    width: 200px;  /* Adjust this value as needed */
+    object-fit: cover;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 50%;
-    padding: 15px;
-}
-
-/* Hide controls on larger screens */
-@media (min-width: 769px) {
-    #imageCarousel .carousel-control-prev,
-    #imageCarousel .carousel-control-next {
-        display: none;
-    }
-}
-
-/* Responsive image sizes */
-@media (max-width: 768px) {
-    .gallery-image {
-        width: 100px;
-        height: 67px;
-    }
-}
-
-@media (max-width: 576px) {
-    .gallery-image {
-        width: 90px;
-        height: 60px;
-    }
-}
-
-/* Keep your existing fadeInGallery animation */
-@keyframes fadeInGallery {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.gallery-image:hover {
+    transform: translateY(-5px);
 }
 
 /* Fade in animation */
@@ -276,93 +238,4 @@ body {
 .pre-order-section .lead {
     color: #666;
     margin-bottom: 2rem;
-}
-
-/* Desktop Layout */
-.gallery-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: nowrap;
-    padding: 20px 0;
-    opacity: 0;
-    animation: fadeInGallery 1s forwards;
-    animation-delay: 3.2s;
-}
-
-.gallery-wrapper .gallery-image {
-    width: 14rem;     
-    height: 9.375rem; 
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important; /* Smoother easing */
-    position: relative;
-    transform: scale(1);
-}
-
-.gallery-wrapper .gallery-image:hover {
-    transform: scale(1.1) !important;
-    z-index: 2;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    cursor: pointer;
-}
-
-/* Mobile Layout */
-.gallery-wrapper-mobile {
-    display: flex;
-    justify-content: center;
-    gap: 0.75rem;
-    padding: 1.25rem 0;
-    opacity: 0;
-    animation: fadeInGallery 1s forwards;
-    animation-delay: 3.2s;
-}
-
-/* Animation */
-@keyframes fadeInGallery {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .gallery-image {
-        width: 5.5rem;
-        height: 3.75rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .gallery-image {
-        width: 5rem;
-        height: 3.375rem;
-    }
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    width: auto;
-    padding: 0 15px;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 50%;
-    padding: 15px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 576px) {
-    .carousel .gallery-image {
-        width: 90px;
-        height: 60px;
-    }
 }
