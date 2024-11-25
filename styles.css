@@ -130,7 +130,7 @@ body {
     padding: 1.25rem 0;
     opacity: 0;
     animation: fadeInGallery 1s forwards;
-    animation-delay: 3.2s;
+    animation-delay: 2.8s;
 }
 
 .gallery-wrapper-mobile .gallery-image {
