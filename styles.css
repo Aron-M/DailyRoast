@@ -278,13 +278,6 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Styles for both layouts */
-.gallery-image {
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
 /* Desktop Layout */
 .gallery-wrapper {
     display: flex;
@@ -297,23 +290,60 @@ body {
     animation-delay: 3.2s;
 }
 
-/* Desktop Layout */
 .gallery-wrapper .gallery-image {
-    width: 14rem;     /* About 224px (down from 250px) */
-    height: 9.375rem; /* About 150px (down from 167px) */
-    transition: all 0.3s ease;
+    width: 14rem;     
+    height: 9.375rem; 
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important; /* Smoother easing */
+    position: relative;
+    transform: scale(1);
 }
 
 .gallery-wrapper .gallery-image:hover {
-    transform: scale(1.1); /* More noticeable expansion */
-    z-index: 1; /* Ensures expanded image appears above others */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+    transform: scale(1.1) !important;
+    z-index: 2;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    cursor: pointer;
 }
 
-/* Mobile Carousel Layout */
-.carousel .gallery-image {
-    width: 100px;
-    height: 67px;
+/* Mobile Layout */
+.gallery-wrapper-mobile {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1.25rem 0;
+    opacity: 0;
+    animation: fadeInGallery 1s forwards;
+    animation-delay: 3.2s;
+}
+
+/* Animation */
+@keyframes fadeInGallery {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery-image {
+        width: 5.5rem;
+        height: 3.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-image {
+        width: 5rem;
+        height: 3.375rem;
+    }
 }
 
 .carousel-control-prev,

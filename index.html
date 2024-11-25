@@ -53,12 +53,12 @@
                             <!-- Desktop Layout (will hide on mobile) -->
                             <div class="col-12 d-none d-md-block">
                                 <div class="gallery-wrapper">
-                                    <img src="images/img1.jpg" alt="Coffee Service" class="gallery-image fade-in">
-                                    <img src="images/img2.jpg" alt="Coffee Service" class="gallery-image fade-in">
-                                    <img src="images/img3.jpg" alt="Coffee Service" class="gallery-image fade-in">
-                                    <img src="images/img4.jpg" alt="Coffee Service" class="gallery-image fade-in">
-                                    <img src="images/img5.jpg" alt="Coffee Service" class="gallery-image fade-in">
-                                    <img src="images/img6.jpg" alt="Coffee Service" class="gallery-image fade-in">
+                                    <img src="images/img1.jpg" alt="Coffee Service" class="gallery-image">
+                                    <img src="images/img2.jpg" alt="Coffee Service" class="gallery-image">
+                                    <img src="images/img3.jpg" alt="Coffee Service" class="gallery-image">
+                                    <img src="images/img4.jpg" alt="Coffee Service" class="gallery-image">
+                                    <img src="images/img5.jpg" alt="Coffee Service" class="gallery-image">
+                                    <img src="images/img6.jpg" alt="Coffee Service" class="gallery-image">
                                 </div>
                             </div>
 
@@ -215,18 +215,5 @@
 </body>
 
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const carousel = document.getElementById('imageCarousel');
-        const carouselInstance = new bootstrap.Carousel(carousel, {
-            interval: 3000 // 3 seconds between slides
-        });
-
-        // Wait for the gallery fade-in animation (3.2s) plus 5 seconds
-        setTimeout(() => {
-            carouselInstance.cycle(); // Start the carousel
-        }, 8200); // 3200ms (fade-in delay) + 5000ms (additional wait)
-    });
-</script>
 
 </html>
