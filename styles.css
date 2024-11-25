@@ -277,3 +277,62 @@ body {
     color: #666;
     margin-bottom: 2rem;
 }
+
+/* Styles for both layouts */
+.gallery-image {
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Desktop Layout */
+.gallery-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    padding: 20px 0;
+    opacity: 0;
+    animation: fadeInGallery 1s forwards;
+    animation-delay: 3.2s;
+}
+
+/* Desktop Layout */
+.gallery-wrapper .gallery-image {
+    width: 14rem;     /* About 224px (down from 250px) */
+    height: 9.375rem; /* About 150px (down from 167px) */
+    transition: all 0.3s ease;
+}
+
+.gallery-wrapper .gallery-image:hover {
+    transform: scale(1.1); /* More noticeable expansion */
+    z-index: 1; /* Ensures expanded image appears above others */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+}
+
+/* Mobile Carousel Layout */
+.carousel .gallery-image {
+    width: 100px;
+    height: 67px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto;
+    padding: 0 15px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .carousel .gallery-image {
+        width: 90px;
+        height: 60px;
+    }
+}
