@@ -183,8 +183,53 @@ body {
 }
 
 .pre-order-section .lead {
+    visibility: hidden;
+    animation: fadeInLead 1s forwards;
+    animation-delay: 7.2s; /* 1 second after the last service icon */
     color: #666;
     margin-bottom: 2rem;
+}
+
+@keyframes fadeInLead {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLead {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.display-4 {
+    font-size: 2rem !important;
+    opacity: 0;
+    animation: fadeInHeading 1s forwards;
+    animation-delay: 3.2s; /* Same delay as gallery */
+}
+
+@keyframes fadeInHeading {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive typography */
@@ -230,11 +275,9 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Add these styles to your existing CSS */
-
 /* Services animations */
 .services-showcase {
-    background-color: #666;
+    background: transparent; /* Set the background to transparent */
     border-radius: 8px;
     padding: 1.5rem;
     margin-top: 1rem;
